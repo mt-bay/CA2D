@@ -41,11 +41,6 @@ public:
 
     ////メソッド////
     ///<summary>
-    ///オブジェクトが生成された際に非同期で行われる処理
-    ///</summary>
-    virtual void OnCreate();
-
-    ///<summary>
     ///オブジェクトの破棄を決定した際に非同期で開始される処理
     ///</summary>
     virtual void OnDestory();
