@@ -165,6 +165,8 @@
     <ClCompile Include="src\kernel\kernel.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
+    <ClCompile Include="src\sequence\MenuSequence.cpp" />
+    <ClCompile Include="src\sequence\MenuSequence\MenuSource.cpp" />
     <ClCompile Include="src\sequence\PlaySequence.cpp" />
     <ClCompile Include="src\sequence\PlaySequence\PlayObject\PlayObject.cpp" />
     <ClCompile Include="src\sequence\Sequence.cpp" />
@@ -289,6 +291,7 @@
     <ClInclude Include="src\s3d_tools\csv_util.hpp" />
     <ClInclude Include="src\s3d_tools\csv_util\template.hpp" />
     <ClInclude Include="src\Sequence.hpp" />
+    <ClInclude Include="src\sequence\MenuSequence.hpp" />
     <ClInclude Include="src\sequence\PlaySequence.hpp" />
     <ClInclude Include="src\sequence\PlaySequence\PlayObject.hpp" />
     <ClInclude Include="src\sequence\PlaySequence\PlayObject\PlayObjectType.hpp" />
