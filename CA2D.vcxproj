@@ -163,6 +163,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\kernel\kernel.cpp" />
+    <ClCompile Include="src\Loader\UserConfigLoader\UserConfigLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
     <ClCompile Include="src\sequence\MenuSequence.cpp" />
@@ -286,6 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\kernel.hpp" />
+    <ClInclude Include="src\Loader\UserConfigLoader.hpp" />
     <ClInclude Include="src\s3d_tools\2D_util.hpp" />
     <ClInclude Include="src\s3d_tools\animation.hpp" />
     <ClInclude Include="src\s3d_tools\csv_util.hpp" />
