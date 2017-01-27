@@ -6,7 +6,7 @@
 
 #include "../Loader/SequenceLoader.hpp"
 
-#include "../model/Choice.hpp"
+#include "../model/domain/Choice.hpp"
 
 namespace seq
 {
@@ -18,7 +18,7 @@ private:
     friend sys::SequenceLoader;
 
 public:
-    std::vector<mdl::Choice> choices;
+    std::vector<mdl::domain::Choice> choices;
 
     virtual void OnDestroy();
 

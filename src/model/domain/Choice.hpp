@@ -5,15 +5,23 @@
 namespace mdl
 {
 
+namespace domain
+{
+
+
 enum ChoiceType;
 
 class Choice
 {
 public:
-    Texture waitGraphic;
-    Texture activeGraphic;
+	s3d::Texture waitGraphic;
+	s3d::Texture activeGraphic;
 
-    ChoiceType type;
+	ChoiceType type;
 };
+
+
+}
+
 
 };

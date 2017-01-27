@@ -1,11 +1,20 @@
 #pragma once
 
-namespace sys
+namespace mdl
 {
 
 
-enum SequenceNavigator
+namespace domain
+{
+
+
+enum ChoiceType
 {
 
 };
+
+
+}
+
+
 }
