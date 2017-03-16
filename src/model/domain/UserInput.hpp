@@ -14,37 +14,61 @@ namespace domain
 
 class UserInput : public Input
 {
+protected:
+
+
+
 public:
     //// 汎用 ////
+	/// <summary>
+	/// ←が連続で入力され続けているフレーム数
+	/// </summary>
+	virtual size_t LeftPressingFrames();
+
     /// <summary>
     /// ←が入力されているか
     /// </summary>
-    virtual bool isLeft();
+    virtual bool IsLeftPressed();
+
+	/// <summary>
+	/// ↓が連続で入力され続けているフレーム数
+	/// </summary>
+	virtual size_t DownPressingFrames();
 
     /// <summary>
     /// ↓が入力されているか
     /// </summary>
-    virtual bool isDown();
+    virtual bool IsDownPressed();
+
+	/// <summary>
+	/// ↑が連続で入力され続けているフレーム数
+	/// </summary>
+	virtual size_t UpPressingFrames();
 
     /// <summary>
     /// ↑が入力されているか
     /// </summary>
-    virtual bool isUp();
+    virtual bool IsUpPressed();
+
+	/// <summary>
+	/// ↑が連続で入力され続けているフレーム数
+	/// </summary>
+	virtual size_t RightPressingFrames();
 
     /// <summary>
     /// →が入力されているか
     /// </summary>
-    virtual bool isRight();
+    virtual bool IsRightPressed();
 
     /// <summary>
     /// 決定が入力されているか
     /// </summary>
-    virtual bool isConfirm();
+    virtual bool IsConfirm();
 
     /// <summary>
     /// キャンセルが入力されているか
     /// </summary>
-    virtual bool isCancel();
+    virtual bool IsCancel();
 };
 
 

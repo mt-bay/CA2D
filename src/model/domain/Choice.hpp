@@ -18,6 +18,9 @@ public:
 	s3d::Texture activeGraphic;
 
 	ChoiceType type;
+
+
+    void Execute();
 };
 
 

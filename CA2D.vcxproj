@@ -22,7 +22,7 @@
     <ProjectGuid>{9F5A5474-73E0-4FF4-B48D-EB59009B9D4A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CA2D</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -165,9 +165,12 @@
     <ClCompile Include="src\kernel\kernel.cpp" />
     <ClCompile Include="src\Loader\UserConfigLoader\UserConfigLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\model\domain\UserInput\UserInput.cpp" />
+    <ClCompile Include="src\model\domain\cpp\Choice.cpp" />
+    <ClCompile Include="src\model\domain\cpp\Choices.cpp" />
+    <ClCompile Include="src\model\domain\cpp\UserInput.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
     <ClCompile Include="src\sequence\MenuSequence.cpp" />
+    <ClCompile Include="src\sequence\MenuSequence\MenuSequence.cpp" />
     <ClCompile Include="src\sequence\MenuSequence\MenuSource.cpp" />
     <ClCompile Include="src\sequence\PlaySequence.cpp" />
     <ClCompile Include="src\sequence\PlaySequence\PlayObject\PlayObject.cpp" />
@@ -291,6 +294,7 @@
     <ClInclude Include="src\Loader\SequenceLoader.hpp" />
     <ClInclude Include="src\Loader\UserConfigLoader.hpp" />
     <ClInclude Include="src\model\domain\Choice.hpp" />
+    <ClInclude Include="src\model\domain\Choices.hpp" />
     <ClInclude Include="src\model\domain\ChoiceType.hpp" />
     <ClInclude Include="src\model\domain\Input.hpp" />
     <ClInclude Include="src\model\domain\UserInput.hpp" />

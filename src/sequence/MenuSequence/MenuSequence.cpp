@@ -26,5 +26,9 @@ void MenuSequence::Draw()
 {
 }
 
+void MenuSequence::Select()
+{
+}
+
 
 };
