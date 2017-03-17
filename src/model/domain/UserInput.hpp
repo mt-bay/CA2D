@@ -14,11 +14,23 @@ namespace domain
 
 class UserInput : public Input
 {
+    //// メンバ変数 ////
 protected:
+    size_t leftPressingFrames;
+    size_t downPressingFrames;
+    size_t upPressingFrames;
+    size_t rightPressingFrames;
 
+    bool confirm;
+    bool cancel;
 
-
+    //// メソッド ////
 public:
+    ///<summary>
+    /// 入力状態の取得・更新
+    ///</summary>
+    virtual void Update();
+
     //// 汎用 ////
 	/// <summary>
 	/// ←が連続で入力され続けているフレーム数
@@ -69,6 +81,9 @@ public:
     /// キャンセルが入力されているか
     /// </summary>
     virtual bool IsCancel();
+
+protected:
+    inline bool IsPressed(size_t _target);
 };
 
 

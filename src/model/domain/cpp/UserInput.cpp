@@ -1,48 +1,92 @@
 #include "../UserInput.hpp"
 
+#include <exception>
+
 #include <Siv3D.hpp>
 
 
 namespace mdl
 {
 
+
 namespace domain
 {
 
 
-bool UserInput::isLeft()
+void UserInput::Update()
 {
-    return s3d::Input::KeyLeft.pressed;
+    throw std::logic_error("mdl::domain::UserInput::Update‚Í–¢ŽÀ‘•‚Å‚·");
 }
 
 
-bool UserInput::isDown()
+
+size_t UserInput::LeftPressingFrames()
 {
-    return s3d::Input::KeyDown.pressed;
+    return leftPressingFrames;
 }
 
-bool UserInput::isUp()
+
+bool UserInput::IsLeftPressed()
 {
-    return s3d::Input::KeyUp.pressed;
+    return IsPressed(leftPressingFrames);
 }
 
-bool UserInput::isRight()
+
+size_t UserInput::DownPressingFrames()
 {
-    return s3d::Input::KeyRight.pressed;
+    return downPressingFrames;
 }
 
-bool UserInput::isConfirm()
+
+bool UserInput::IsDownPressed()
 {
-    return s3d::Key(L'z').pressed;
+    return IsPressed(downPressingFrames);
 }
 
 
-bool UserInput::isCancel()
+size_t UserInput::UpPressingFrames()
 {
-    return s3d::Key(L'x').pressed;
+    return upPressingFrames;
+}
+
+
+bool UserInput::IsUpPressed()
+{
+    return IsPressed(upPressingFrames);
+}
+
+
+size_t UserInput::RightPressingFrames()
+{
+    return rightPressingFrames;
+}
+
+
+bool UserInput::IsRightPressed()
+{
+    return IsPressed(rightPressingFrames);
+}
+
+
+bool UserInput::IsConfirm()
+{
+    return false;
+}
+
+
+bool UserInput::IsCancel()
+{
+    return false;
+}
+
+
+inline bool UserInput::IsPressed(size_t _target)
+{
+    return _target != 0;
 }
 
 
 }
+
 
 }
