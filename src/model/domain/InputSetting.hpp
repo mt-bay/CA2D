@@ -12,7 +12,7 @@ namespace domain
 {
 
 
-class InputSetting
+class KeyInputSetting
 {
     //// ƒƒ“ƒo•Ï” ////
 private:
@@ -30,7 +30,7 @@ public:
     static s3d::Key Right();
 
 private:
-    static void Load();
+    static void Load(const JSONReader& _settingFile);
     static bool IsLoaded();
     
 };
