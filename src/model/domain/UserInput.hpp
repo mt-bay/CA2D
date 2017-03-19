@@ -26,10 +26,11 @@ protected:
 
     //// メソッド ////
 public:
+    
     ///<summary>
     /// 入力状態の取得・更新
     ///</summary>
-    virtual void Update();
+    [[deprecated]] virtual void Update();
 
     //// 汎用 ////
 	/// <summary>

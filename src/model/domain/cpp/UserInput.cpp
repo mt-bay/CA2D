@@ -15,6 +15,7 @@ namespace domain
 
 void UserInput::Update()
 {
+    
     throw std::logic_error("mdl::domain::UserInput::Update‚Í–¢ŽÀ‘•‚Å‚·");
 }
 

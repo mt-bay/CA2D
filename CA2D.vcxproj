@@ -168,6 +168,7 @@
     <ClCompile Include="src\model\domain\cpp\Choice.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choices.cpp" />
     <ClCompile Include="src\model\domain\cpp\UserInput.cpp" />
+    <ClCompile Include="src\model\domain\cpp\InputSetting.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
     <ClCompile Include="src\sequence\MenuSequence.cpp" />
     <ClCompile Include="src\sequence\MenuSequence\MenuSequence.cpp" />
@@ -298,6 +299,7 @@
     <ClInclude Include="src\model\domain\ChoiceType.hpp" />
     <ClInclude Include="src\model\domain\Input.hpp" />
     <ClInclude Include="src\model\domain\UserInput.hpp" />
+    <ClInclude Include="src\model\domain\InputSetting.hpp" />
     <ClInclude Include="src\s3d_tools\2D_util.hpp" />
     <ClInclude Include="src\s3d_tools\animation.hpp" />
     <ClInclude Include="src\s3d_tools\csv_util.hpp" />
