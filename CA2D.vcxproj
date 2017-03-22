@@ -171,12 +171,12 @@
     <ClCompile Include="src\model\domain\cpp\InputSetting.cpp" />
     <ClCompile Include="src\model\domain\cpp\UserXInput.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
-    <ClCompile Include="src\sequence\MenuSequence.cpp" />
-    <ClCompile Include="src\sequence\MenuSequence\MenuSequence.cpp" />
+    <ClCompile Include="src\ViewController\MenuSequence.cpp" />
+    <ClCompile Include="src\ViewController\cpp\MenuSequence.cpp" />
     <ClCompile Include="src\sequence\MenuSequence\MenuSource.cpp" />
-    <ClCompile Include="src\sequence\PlaySequence.cpp" />
-    <ClCompile Include="src\sequence\PlaySequence\PlayObject\PlayObject.cpp" />
-    <ClCompile Include="src\sequence\Sequence.cpp" />
+    <ClCompile Include="src\ViewController\PlaySequence.cpp" />
+    <ClCompile Include="src\ViewController\PlaySequence\PlayObject\PlayObject.cpp" />
+    <ClCompile Include="src\ViewController\Sequence.cpp" />
     <ClCompile Include="src\test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -307,11 +307,11 @@
     <ClInclude Include="src\s3d_tools\animation.hpp" />
     <ClInclude Include="src\s3d_tools\csv_util.hpp" />
     <ClInclude Include="src\s3d_tools\csv_util\template.hpp" />
-    <ClInclude Include="src\Sequence.hpp" />
-    <ClInclude Include="src\sequence\MenuSequence.hpp" />
-    <ClInclude Include="src\sequence\PlaySequence.hpp" />
-    <ClInclude Include="src\sequence\PlaySequence\PlayObject.hpp" />
-    <ClInclude Include="src\sequence\PlaySequence\PlayObject\PlayObjectType.hpp" />
+    <ClInclude Include="src\ViewController\Sequence.hpp" />
+    <ClInclude Include="src\ViewController\MenuSequence.hpp" />
+    <ClInclude Include="src\ViewController\PlaySequence.hpp" />
+    <ClInclude Include="src\ViewController\PlaySequence\PlayObject.hpp" />
+    <ClInclude Include="src\ViewController\PlaySequence\PlayObject\PlayObjectType.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

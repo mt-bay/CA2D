@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../model/domain/Input.hpp"
 
 namespace sys
 {
-
 
 //前方宣言
 enum SequenceState;
@@ -20,6 +20,7 @@ protected:
     ///オブジェクトの状態
     ///</summary>
     SequenceState state;
+    mdl::domain::Input* input;
 
     ////コンストラクタ・デストラクタ////
 public:

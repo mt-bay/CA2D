@@ -4,7 +4,8 @@
 
 #include <vector>
 
-#include "./Sequence.hpp"
+#include "model/domain/Input.hpp"
+#include "ViewController/Sequence.hpp"
 
 namespace sys
 {
@@ -16,12 +17,15 @@ class Kernel
 {
 	//メンバ変数
 public:
+    static 
+
     ///sequenceをスタック状に保存するvector
     std::vector<Sequence*> sequenceStack;
     ///カレントとして処理・描画するindex
     int currentIndex;
+    void Init();
     ///
-    
+    void Update();
 };
 
 

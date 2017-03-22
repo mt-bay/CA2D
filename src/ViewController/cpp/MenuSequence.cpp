@@ -13,7 +13,7 @@ void MenuSequence::OnDestroy()
 
 void MenuSequence::Update()
 {
-    
+
 }
 
 
