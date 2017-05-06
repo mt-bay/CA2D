@@ -20,7 +20,7 @@ protected:
     ///オブジェクトの状態
     ///</summary>
     SequenceState state;
-    mdl::domain::Input* input;
+    model::domain::Input* input;
 
     ////コンストラクタ・デストラクタ////
 public:

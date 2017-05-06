@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace mdl
+namespace model
 {
 
 
@@ -17,32 +17,32 @@ public:
     /// <summary>
     /// ©‚ª“ü—Í‚³‚ê‚Ä‚¢‚é‚©
     /// </summary>
-    virtual bool isLeft() = 0;
+    virtual bool Left() = 0;
 
     /// <summary>
     /// «‚ª“ü—Í‚³‚ê‚Ä‚¢‚é‚©
     /// </summary>
-    virtual bool isDown() = 0;
+    virtual bool Down() = 0;
     /// <summary>
     /// ª‚ª“ü—Í‚³‚ê‚Ä‚¢‚é‚©
     /// </summary>
-    virtual bool isUp() = 0;
+    virtual bool Up() = 0;
 
     /// <summary>
     /// ¨‚ª“ü—Í‚³‚ê‚Ä‚¢‚é‚©
     /// </summary>
-    virtual bool isRight() = 0;
+    virtual bool Right() = 0;
 
     ////‘I‘ğˆŒü‚¯////
     /// <summary>
     /// Œˆ’è‚ª“ü—Í‚³‚ê‚Ä‚¢‚é‚©
     /// </summary>
-    virtual bool isConfirm();
+    virtual bool Confirm();
 
     /// <summary>
     /// ƒLƒƒƒ“ƒZƒ‹‚ª“ü—Í‚³‚ê‚Ä‚¢‚é‚©
     /// </summary>
-    virtual bool isCancel();
+    virtual bool Cancel();
 
     ////
 };

@@ -3,7 +3,7 @@
 #include <Siv3D.hpp>
 
 
-namespace mdl
+namespace model
 {
 
 

@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <map>
-#include "2D.hpp"
 
 #include "../PlaySequence.hpp"
 #include "PlayObject/PlayObjectType.hpp"
@@ -72,7 +71,7 @@ public:
     MakeDicision_IsEquipped
         (const PlaySequence*              _caller,
          const PlayObject*                _possessor,
-         const std::map<mt::tstring, int> _operation);
+         const std::map<s3d::String, int> _operation);
 
     ///<summary>
     ///オブジェクトが自律している(何かに所持されている状態ではない)際の移動処理

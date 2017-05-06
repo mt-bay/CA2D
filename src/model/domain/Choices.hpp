@@ -4,7 +4,7 @@
 #include "Choice.hpp"
 
 
-namespace mdl
+namespace model
 {
 
 
@@ -19,7 +19,14 @@ protected:
     int                  selected;
     std::vector<Choice*> choises;
 
-    unsigned int         column;
+    /// <summary>選択肢リストの上中央の位置</summary>
+    s3d::Vector2D<int>   upperCenter;
+
+    ///<summary>表示する行数</summary>
+    unsigned int visibleRowNum;
+
+    ///<summary>列数</summary>
+    unsigned int columnNum;
 public:
     ///<summary>
     /// ←

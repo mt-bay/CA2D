@@ -26,14 +26,6 @@ SequenceState Sequence::State()
 
 
 void
-Sequence::OnCreate
-()
-{
-    // オーバーライドされなかったら何もしない
-}
-
-
-void
 Sequence::OnDestory
 ()
 {

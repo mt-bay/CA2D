@@ -2,9 +2,7 @@
 
 #include <vector>
 
-#include "../Sequence.hpp"
-
-#include "../Loader/SequenceLoader.hpp"
+#include "Sequence.hpp"
 
 #include "../model/domain/Choice.hpp"
 
@@ -14,15 +12,15 @@ namespace seq
 
 class MenuSequence : public sys::Sequence
 {
-private:
-    friend sys::SequenceLoader;
-
     //// メンバ変数 ////
 public:
-    std::vector<mdl::domain::Choice> choices;
+    std::vector<model::domain::Choice> choices;
 
 private:
     int selected;
+
+public:
+    virtual ~MenuSequence();
 
     //// ライフサイクル ////
 public:

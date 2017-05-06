@@ -5,6 +5,12 @@ namespace seq
 {
 
 
+MenuSequence::~MenuSequence()
+{
+
+}
+
+
 void MenuSequence::OnDestroy()
 {
     

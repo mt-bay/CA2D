@@ -163,13 +163,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\kernel\kernel.cpp" />
+    <ClCompile Include="src\lib\asc\Input\AscInput.cpp" />
+    <ClCompile Include="src\lib\asc\Input\AscInputAxis.cpp" />
     <ClCompile Include="src\Loader\UserConfigLoader\UserConfigLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choice.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choices.cpp" />
-    <ClCompile Include="src\model\domain\cpp\UserInput.cpp" />
+    <ClCompile Include="src\model\domain\cpp\UserAscInput.cpp" />
     <ClCompile Include="src\model\domain\cpp\InputSetting.cpp" />
-    <ClCompile Include="src\model\domain\cpp\UserXInput.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
     <ClCompile Include="src\ViewController\MenuSequence.cpp" />
     <ClCompile Include="src\ViewController\cpp\MenuSequence.cpp" />
@@ -293,16 +294,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\kernel.hpp" />
-    <ClInclude Include="src\Loader\SequenceLoader.hpp" />
+    <ClInclude Include="src\lib\asc\Input.hpp" />
+    <ClInclude Include="src\lib\asc\Input\Axis.hpp" />
+    <ClInclude Include="src\lib\asc\Input\CAxis.hpp" />
     <ClInclude Include="src\Loader\UserConfigLoader.hpp" />
     <ClInclude Include="src\model\domain\Choice.hpp" />
     <ClInclude Include="src\model\domain\Choices.hpp" />
     <ClInclude Include="src\model\domain\ChoiceType.hpp" />
     <ClInclude Include="src\model\domain\ControllerInput.hpp" />
     <ClInclude Include="src\model\domain\Input.hpp" />
-    <ClInclude Include="src\model\domain\UserInput.hpp" />
+    <ClInclude Include="src\model\domain\UserAscInput.hpp" />
     <ClInclude Include="src\model\domain\InputSetting.hpp" />
-    <ClInclude Include="src\model\domain\UserXInput.hpp" />
+    <ClInclude Include="src\model\domain\UserSetting.h" />
     <ClInclude Include="src\s3d_tools\2D_util.hpp" />
     <ClInclude Include="src\s3d_tools\animation.hpp" />
     <ClInclude Include="src\s3d_tools\csv_util.hpp" />

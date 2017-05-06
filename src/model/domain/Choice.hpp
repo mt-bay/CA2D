@@ -2,7 +2,7 @@
 
 #include <Siv3D.hpp>
 
-namespace mdl
+namespace model
 {
 
 namespace domain
@@ -19,6 +19,20 @@ public:
 
 	ChoiceType type;
 
+    ///<summary>
+    ///
+    ///</summary>
+    Choice();
+
+    ///<summary>
+    ///
+    ///</summary>
+    Choice(const Choice& original);
+
+    ///<summary>
+    ///
+    ///</summary>
+    Choice& operator=(const Choice& original);
 
     void Execute();
 };

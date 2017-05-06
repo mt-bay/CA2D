@@ -1,0 +1,2 @@
+# AscInput
+Siv3DでキーボードとDirectInput、XInputをまとめて扱うモジュール

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Sequence.hpp"
+#include "Sequence.hpp"
 #include "PlaySequence/PlayObject.hpp"
 
 namespace sys
