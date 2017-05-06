@@ -17,15 +17,28 @@ class Kernel
 {
 	//メンバ変数
 public:
-    static 
 
     ///sequenceをスタック状に保存するvector
     std::vector<Sequence*> sequenceStack;
     ///カレントとして処理・描画するindex
     int currentIndex;
+
+public:
     void Init();
+
+    void MainProcess();
+
+private:
     ///
     void Update();
+
+    void Draw();
+
+    void DeleteSequence();
+
+    void GenerateSequence();
+
+    int GetNewSequenceIndex();
 };
 
 
