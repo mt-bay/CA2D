@@ -165,19 +165,18 @@
     <ClCompile Include="src\kernel\kernel.cpp" />
     <ClCompile Include="src\lib\asc\Input\AscInput.cpp" />
     <ClCompile Include="src\lib\asc\Input\AscInputAxis.cpp" />
-    <ClCompile Include="src\Loader\UserConfigLoader\UserConfigLoader.cpp" />
+    <ClCompile Include="src\model\domain\UserConfigLoader\UserConfigLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choice.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choices.cpp" />
     <ClCompile Include="src\model\domain\cpp\UserAscInput.cpp" />
     <ClCompile Include="src\model\domain\cpp\InputSetting.cpp" />
     <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
-    <ClCompile Include="src\ViewController\MenuSequence.cpp" />
     <ClCompile Include="src\ViewController\cpp\MenuSequence.cpp" />
     <ClCompile Include="src\sequence\MenuSequence\MenuSource.cpp" />
-    <ClCompile Include="src\ViewController\PlaySequence.cpp" />
-    <ClCompile Include="src\ViewController\PlaySequence\PlayObject\PlayObject.cpp" />
-    <ClCompile Include="src\ViewController\Sequence.cpp" />
+    <ClCompile Include="src\ViewController\cpp\PlaySequence.cpp" />
+    <ClCompile Include="src\model\domain\PlayObject\PlayObject.cpp" />
+    <ClCompile Include="src\ViewController\cpp\Sequence.cpp" />
     <ClCompile Include="src\test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -297,7 +296,9 @@
     <ClInclude Include="src\lib\asc\Input.hpp" />
     <ClInclude Include="src\lib\asc\Input\Axis.hpp" />
     <ClInclude Include="src\lib\asc\Input\CAxis.hpp" />
-    <ClInclude Include="src\Loader\UserConfigLoader.hpp" />
+    <ClInclude Include="src\model\domain\Loader.hpp" />
+    <ClInclude Include="src\model\domain\SequenceState.hpp" />
+    <ClInclude Include="src\model\domain\UserConfigLoader.hpp" />
     <ClInclude Include="src\model\domain\Choice.hpp" />
     <ClInclude Include="src\model\domain\Choices.hpp" />
     <ClInclude Include="src\model\domain\ChoiceType.hpp" />
@@ -313,8 +314,8 @@
     <ClInclude Include="src\ViewController\Sequence.hpp" />
     <ClInclude Include="src\ViewController\MenuSequence.hpp" />
     <ClInclude Include="src\ViewController\PlaySequence.hpp" />
-    <ClInclude Include="src\ViewController\PlaySequence\PlayObject.hpp" />
-    <ClInclude Include="src\ViewController\PlaySequence\PlayObject\PlayObjectType.hpp" />
+    <ClInclude Include="src\model\domain\PlayObject.hpp" />
+    <ClInclude Include="src\model\domain\PlayObject\PlayObjectType.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

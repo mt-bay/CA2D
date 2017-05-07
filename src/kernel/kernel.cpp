@@ -6,6 +6,7 @@
 #include "../kernel.hpp"
 
 #include "../s3d_tools/csv_util.hpp"
+#include "../model/domain/SequenceState.hpp"
 
 namespace sys
 {
@@ -54,21 +55,33 @@ void Kernel::Draw()
 
 void Kernel::DeleteSequence()
 {
-    ///–¢ŽÀ‘•‚Å‚·
+    for(int i = 0; i < sequenceStack.size();)
+    {
+        if(sequenceStack.at(i)->State() == model::domain::SequenceState::ReadyToDestroy)
+        {
+            delete sequenceStack.at(i);
+            sequenceStack.erase(sequenceStack.begin() + i);
+        }
+        else
+        {
+            ++i;
+        }
+    }
 }
 
 
 void Kernel::GenerateSequence()
 {
+
     ///–¢ŽÀ‘•‚Å‚·
 }
 
 
 int Kernel::GetNewSequenceIndex()
 {
-    for(int i = sequenceStack.size() - 1; i > 0; --i)
+    for(int i = (int)sequenceStack.size() - 1; i > 0; --i)
     {
-        if(sequenceStack.at(i)->State == SequenceState::Ready)
+        if(sequenceStack.at((size_t)i)->State() == model::domain::SequenceState::Ready)
         {
             return i;
         }

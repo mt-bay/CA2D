@@ -1,11 +1,7 @@
-#include "PlaySequence.hpp"
+#include "../PlaySequence.hpp"
 
 
-namespace sys
-{
-
-
-namespace seq
+namespace viewController
 {
 
 
@@ -49,7 +45,7 @@ void PlaySequence::UpdateAsync()
 
 void PlaySequence::Draw()
 {
-    for each (PlayObject o in autonomyObjects)
+    for each (model::domain::PlayObject o in autonomyObjects)
     {
         o.Draw_Autonomy(this);
     }
@@ -58,7 +54,3 @@ void PlaySequence::Draw()
 
 
 }
-
-
-}
-

@@ -4,13 +4,13 @@
 #include <vector>
 #include <map>
 
-#include "../PlaySequence.hpp"
+#include "../../ViewController/PlaySequence.hpp"
 #include "PlayObject/PlayObjectType.hpp"
-namespace sys
+namespace model
 {
 
 
-namespace seq
+namespace domain
 {
 
 
@@ -62,30 +62,30 @@ public:
     ///</summary>
     virtual void
     MakeDicision_Autonomy
-        (const PlaySequence* _caller, const size_t _thisIndex);
+        (const viewController::PlaySequence* _caller, const size_t _thisIndex);
 
     ///<summary>
     ///オブジェクトが何かに所持されている際の意思決定
     ///</summary>
     virtual void
     MakeDicision_IsEquipped
-        (const PlaySequence*              _caller,
-         const PlayObject*                _possessor,
-         const std::map<s3d::String, int> _operation);
+        (const viewController::PlaySequence* _caller,
+         const PlayObject*                   _possessor,
+         const std::map<s3d::String, int>    _operation);
 
     ///<summary>
     ///オブジェクトが自律している(何かに所持されている状態ではない)際の移動処理
     ///</summary>
     virtual void
     Move_Autonomy
-        (PlaySequence* _caller);
+        (viewController::PlaySequence* _caller);
 
     ///<summary>
     ///オブジェクトが自律している(何かに所持されている状態ではない)際の描画
     ///</summary>
     virtual void
     Draw_Autonomy
-        (const PlaySequence* _caller)
+        (const viewController::PlaySequence* _caller)
         const;
 
     ///<summary>
@@ -93,8 +93,8 @@ public:
     ///</summary>
     virtual void
         Draw_IsEquipped
-        (const PlaySequence*     _caller,
-         const Vector3D<double>& _absolutePosition)
+        (const viewController::PlaySequence* _caller,
+         const Vector3D<double>&             _absolutePosition)
         const;
 
     ///<summary>

@@ -1,19 +1,20 @@
-#include "Sequence.hpp"
+#include "../Sequence.hpp"
 
+#include "../model/domain/SequenceState.hpp"
 
-namespace sys
+namespace viewController
 {
 
 
 Sequence::Sequence
-    ()
+()
 {
     state = SequenceState::Loading;
 }
 
 
 Sequence::~Sequence
-    ()
+()
 {
 
 }
@@ -21,7 +22,7 @@ Sequence::~Sequence
 
 SequenceState Sequence::State()
 {
-    return SequenceState();
+    return state;
 }
 
 
@@ -36,18 +37,11 @@ Sequence::OnDestory
 void Sequence::UpdateAsync()
 {
     //状態チェック
-    if(state != SequenceState::Ready)
+    if (state != SequenceState::Ready)
     {
         return;
     }
 }
-
-
-
-
-
-
-
 
 
 }

@@ -3,6 +3,7 @@
 
 
 #include <vector>
+#include <queue>
 
 #include "model/domain/Input.hpp"
 #include "ViewController/Sequence.hpp"
@@ -18,10 +19,13 @@ class Kernel
 	//メンバ変数
 public:
 
+private:
     ///sequenceをスタック状に保存するvector
-    std::vector<Sequence*> sequenceStack;
+    std::vector<viewController::Sequence*> sequenceStack;
     ///カレントとして処理・描画するindex
     int currentIndex;
+    
+    std::queue<s3d::String> loadRequest;
 
 public:
     void Init();

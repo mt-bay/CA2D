@@ -6,11 +6,11 @@
 
 #include "../model/domain/Choice.hpp"
 
-namespace seq
+namespace viewController
 {
 
 
-class MenuSequence : public sys::Sequence
+class MenuSequence : public Sequence
 {
     //// ƒƒ“ƒo•Ï” ////
 public:

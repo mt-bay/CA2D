@@ -1,13 +1,9 @@
 #pragma once
 
 #include "Sequence.hpp"
-#include "PlaySequence/PlayObject.hpp"
+#include "../model/domain/PlayObject.hpp"
 
-namespace sys
-{
-
-
-namespace seq
+namespace viewController
 {
 
 
@@ -16,7 +12,7 @@ class PlaySequence : public Sequence
     ////メンバ////
 public:
     ///<summary>ステージ上で自律しているオブジェクト</summary>
-    std::vector<PlayObject> autonomyObjects;
+    std::vector<model::domain::PlayObject> autonomyObjects;
 
 protected:
     PixelShader* shader;
@@ -64,9 +60,6 @@ public:
     ///</summary>
     virtual void Draw();
 };
-
-
-}
 
 
 }

@@ -2,7 +2,7 @@
 
 #include "../model/domain/Input.hpp"
 
-namespace sys
+namespace viewController
 {
 
 //‘O•ûéŒ¾
@@ -63,24 +63,6 @@ public:
     ///•`‰æ
     ///</summary>
     virtual void Draw() = 0;
-};
-
-
-///<summary>
-///Sequence‚Ìó‘Ô‚ğ•\‚·—ñ‹“Œ^
-///</summary>
-enum SequenceState
-{
-    ///<summary>ì¬’†</summary>
-    Creating,
-    ///<summary>“Ç‚İ‚İ’†</summary>
-    Loading,
-    ///<summary>ˆ—‰Â”\</summary>
-    Ready,
-    ///<summary>Sequence”pŠüˆ—’†</summary>
-    DestroyProcessing,
-    ///<summary>”pŠü€”õŠ®—¹</summary>
-    ReadyToDestroy
 };
 
 
