@@ -5,7 +5,6 @@
 
 #include "../kernel.hpp"
 
-#include "../s3d_tools/csv_util.hpp"
 #include "../model/domain/SequenceState.hpp"
 
 namespace sys
@@ -35,7 +34,7 @@ void Kernel::MainProcess()
         catch(std::out_of_range e)
         {
             LOG_ERROR(e.what());
-            currentIndex = sequenceStack.size() - 1;
+            currentIndex = (int)sequenceStack.size() - 1;
         }
     }
 }

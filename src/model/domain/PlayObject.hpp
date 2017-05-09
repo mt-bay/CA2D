@@ -4,8 +4,22 @@
 #include <vector>
 #include <map>
 
-#include "../../ViewController/PlaySequence.hpp"
-#include "PlayObject/PlayObjectType.hpp"
+#include "PlayObjectType.hpp"
+
+
+///<summary>
+///前方宣言
+///</summary>
+namespace viewController
+{
+
+
+class PlaySequence;
+
+
+}
+
+
 namespace model
 {
 
@@ -44,6 +58,14 @@ protected:
 
     //アクセッサ
 public:
+
+    PlayObject();
+
+    PlayObject(const PlayObject& original);
+
+    PlayObject& operator=(const PlayObject& rhs);
+
+
     ///<summary>type取得</summary>
     ///<returns>このインスタンスのtype</returns>
     PlayObjectType GetType();

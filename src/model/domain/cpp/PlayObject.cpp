@@ -1,11 +1,14 @@
 #include "..\PlayObject.hpp"
+
+#include "../../../ViewController/PlaySequence.hpp"
+
 #include <algorithm>
 
-namespace sys
+namespace model
 {
 
 
-namespace seq
+namespace domain
 {
 
 
@@ -24,27 +27,30 @@ void PlayObject::OnCreate()
 
 
 void
-PlayObject::MakeDicision_Autonomy(const PlaySequence * _caller, const size_t _thisIndex)
+PlayObject::MakeDicision_Autonomy(const viewController::PlaySequence * _caller,
+                                  const size_t _thisIndex)
 {
     throw std::logic_error("未実装です");
 }
 
 
 void
-PlayObject::MakeDicision_IsEquipped(const PlaySequence * _caller, const PlayObject * _possessor, const std::map<mt::tstring, int> _operation)
+PlayObject::MakeDicision_IsEquipped(const viewController::PlaySequence * _caller,
+                                    const PlayObject * _possessor,
+                                    const std::map<s3d::String, int> _operation)
 {
     throw std::logic_error("未実装です");
 }
 
 
 void
-PlayObject::Move_Autonomy(PlaySequence* _caller)
+PlayObject::Move_Autonomy(viewController::PlaySequence* _caller)
 {
     accel.length();
 }
 
 
-void PlayObject::Draw_Autonomy(const PlaySequence * _caller)
+void PlayObject::Draw_Autonomy(const viewController::PlaySequence * _caller)
     const
 {
     //描画本体の処理は所持されている状態と相対位置の違いのみ
@@ -52,7 +58,7 @@ void PlayObject::Draw_Autonomy(const PlaySequence * _caller)
 }
 
 
-void PlayObject::Draw_IsEquipped(const PlaySequence *    _caller,
+void PlayObject::Draw_IsEquipped(const viewController::PlaySequence * _caller,
                                  const Vector3D<double>& _absolutePosition)
 const
 {
@@ -65,11 +71,11 @@ const
 
     //アニメーションをしたい場合は個別のパーツをMat4x4で座標変換する
     //それはそれを実現するためのエディタを作ってからやろう
-    Array<ModelNode> node = model.nodes;
+    //Array<ModelNode> nodes = model.nodes;
     //ノードをposに移動させて描画
     for (const ModelNode& node : model.nodes())
     {
-        TransformedMesh& tMesh = node.mesh.translated(pos);
+        TransformedMesh tMesh = node.mesh.translated(pos);
         String dTextureName = node.material.diffuseTextureName;
         dTextureName.isEmpty ? tMesh.draw() : tMesh.draw(TextureAsset(dTextureName));
     }
@@ -78,11 +84,11 @@ const
 
 Vector3D<double> PlayObject::IsCollision(PlayObject * _target)
 {
-
+    throw std::logic_error("PlayObject::IsCollisionは未実装です");
+    return Vector3D<double>(0, 0, 0);
 }
 
 
 }
-
 
 }

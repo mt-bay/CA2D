@@ -57,10 +57,10 @@ bool UserAscInput::Cancel() const
 }
 
 
-inline bool UserAscInput::DirectionCheck(const Direction direction) const
+bool UserAscInput::DirectionCheck(const Direction direction) const
 {
     Optional<uint32> d =  asc.as4Direction(L"Lx", L"Ly");
-    return d.has_value ? false : d.value == (uint32)direction;
+    return d.has_value() ? false : d.value() == (unsigned int)direction;
 }
 
 

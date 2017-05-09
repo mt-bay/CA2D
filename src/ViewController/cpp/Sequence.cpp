@@ -1,6 +1,7 @@
 #include "../Sequence.hpp"
 
-#include "../model/domain/SequenceState.hpp"
+#include "../../model/domain/SequenceState.hpp"
+
 
 namespace viewController
 {
@@ -9,7 +10,7 @@ namespace viewController
 Sequence::Sequence
 ()
 {
-    state = SequenceState::Loading;
+    state = model::domain::SequenceState::Loading;
 }
 
 
@@ -20,7 +21,7 @@ Sequence::~Sequence
 }
 
 
-SequenceState Sequence::State()
+model::domain::SequenceState Sequence::State()
 {
     return state;
 }
@@ -37,7 +38,7 @@ Sequence::OnDestory
 void Sequence::UpdateAsync()
 {
     //状態チェック
-    if (state != SequenceState::Ready)
+    if (state != model::domain::SequenceState::Ready)
     {
         return;
     }

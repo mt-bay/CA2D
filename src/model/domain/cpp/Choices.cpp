@@ -5,7 +5,7 @@
 #include "../Choices.hpp"
 
 
-namespace mdl
+namespace model
 {
 
 

@@ -165,19 +165,13 @@
     <ClCompile Include="src\kernel\kernel.cpp" />
     <ClCompile Include="src\lib\asc\Input\AscInput.cpp" />
     <ClCompile Include="src\lib\asc\Input\AscInputAxis.cpp" />
-    <ClCompile Include="src\model\domain\UserConfigLoader\UserConfigLoader.cpp" />
+    <ClCompile Include="src\model\domain\cpp\UserConfigLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choice.cpp" />
     <ClCompile Include="src\model\domain\cpp\Choices.cpp" />
     <ClCompile Include="src\model\domain\cpp\UserAscInput.cpp" />
-    <ClCompile Include="src\model\domain\cpp\InputSetting.cpp" />
-    <ClCompile Include="src\s3d_tools\2D_util\2D_util.cpp" />
     <ClCompile Include="src\ViewController\cpp\MenuSequence.cpp" />
-    <ClCompile Include="src\sequence\MenuSequence\MenuSource.cpp" />
-    <ClCompile Include="src\ViewController\cpp\PlaySequence.cpp" />
-    <ClCompile Include="src\model\domain\PlayObject\PlayObject.cpp" />
     <ClCompile Include="src\ViewController\cpp\Sequence.cpp" />
-    <ClCompile Include="src\test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
@@ -307,15 +301,8 @@
     <ClInclude Include="src\model\domain\UserAscInput.hpp" />
     <ClInclude Include="src\model\domain\InputSetting.hpp" />
     <ClInclude Include="src\model\domain\UserSetting.h" />
-    <ClInclude Include="src\s3d_tools\2D_util.hpp" />
-    <ClInclude Include="src\s3d_tools\animation.hpp" />
-    <ClInclude Include="src\s3d_tools\csv_util.hpp" />
-    <ClInclude Include="src\s3d_tools\csv_util\template.hpp" />
     <ClInclude Include="src\ViewController\Sequence.hpp" />
     <ClInclude Include="src\ViewController\MenuSequence.hpp" />
-    <ClInclude Include="src\ViewController\PlaySequence.hpp" />
-    <ClInclude Include="src\model\domain\PlayObject.hpp" />
-    <ClInclude Include="src\model\domain\PlayObject\PlayObjectType.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

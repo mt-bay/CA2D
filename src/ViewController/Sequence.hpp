@@ -2,11 +2,29 @@
 
 #include "../model/domain/Input.hpp"
 
-namespace viewController
+
+namespace model
 {
+
+
+namespace domain
+{
+
 
 //前方宣言
 enum SequenceState;
+
+
+}
+
+
+}
+
+
+namespace viewController
+{
+
+
 
 
 ///<summary>
@@ -19,7 +37,7 @@ protected:
     ///<summary>
     ///オブジェクトの状態
     ///</summary>
-    SequenceState state;
+    model::domain::SequenceState state;
     model::domain::Input* input;
 
     ////コンストラクタ・デストラクタ////
@@ -38,7 +56,7 @@ public:
     ///<return>
     ///自身の状態を返す
     ///</return>
-    virtual SequenceState State();
+    virtual model::domain::SequenceState State();
 
     ////メソッド////
     ///<summary>

@@ -38,6 +38,9 @@ public:
     ///<param name="_json">読み込むJSONファイル</param>
     PlaySequence(JSONReader _json);
 
+
+    virtual ~PlaySequence();
+
     ////メソッド////
 public:
     ///<summary>
