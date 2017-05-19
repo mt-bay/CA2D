@@ -7,6 +7,8 @@ void Main()
 {
     asc::Input input;
 
+    Font font(16);
+
     // コントローラーを用意
     Gamepad gamepad(0);
     XInput xinput(0);
@@ -19,25 +21,27 @@ void Main()
     input.addAxis(L"x", asc::Axis(s3d::Input::KeyRight, s3d::Input::KeyLeft) | asc::Axis(gamepad, asc::GamepadAxis::X) | asc::Axis(xinput, asc::XInputAxis::LeftThumbX));
     input.addAxis(L"y", asc::Axis(s3d::Input::KeyUp, s3d::Input::KeyDown) | asc::Axis(gamepad, asc::GamepadAxis::Y) | asc::Axis(xinput, asc::XInputAxis::LeftThumbY));
 
+    input.enabled = true;
+    s3d::String str;
     while (System::Update())
     {
-        ClearPrint();
-
+        //font(L"わいわい忍者ランド").draw(110, 100);
         // 値の使用
-        Println(L"fire = ", input.button(L"fire").clicked);
-        Println(L"x = ", input.axis(L"x"));
 
-        // enabledがfalseの間、入力が無効になる
-        input.enabled = !input.button(L"fire").pressed;
-
-        Println(L"fire = ", input.button(L"fire").clicked);
-
-        // 零ベクトルを考慮した単位ベクトルを返す
-        Println(L"(x,y) = ", input.vec2Normalized(L"x", L"y"));
-
+        str = s3d::String(L"fire = ") + s3d::ToString(input.axis(L"x"));
+        font(str).draw(10, 10);
+        str = s3d::String(L"x = ") + s3d::ToString(input.axis(L"y"));
+        font(str).draw(10, 30);
+        str = s3d::String(L"4方向で表現 = ") + s3d::ToString(input.as4Direction(L"x", L"y").value_or(256));
+        font(str).draw(10, 50);
         // 入力を8方向で返す
-        Println(L"(x,y) = ", input.as8Direction(L"x", L"y"));
+        str = s3d::String(L"8方向で表現 = ") + s3d::ToString(input.as8Direction(L"x", L"y").value_or(256));
+        font(str).draw(10, 80);
 
-        input.enabled = true;
+
+        str = s3d::String(L"fire = ") + s3d::ToString(input.button(L"fire").clicked);
+        font(str).draw(10, 110);
+
+        
     }
 }

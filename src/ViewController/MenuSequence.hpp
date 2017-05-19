@@ -24,17 +24,27 @@ public:
 
     //// ライフサイクル ////
 public:
+    ///<summary>
+    ///</summary>
     virtual void OnDestroy();
 
+    ///<summary>
+    ///</summary>
     virtual void Update();
 
+    ///<summary>
+    ///</summary>
     virtual void UpdateAsync();
 
+    ///<summary>
+    ///</summary>
     virtual void Draw();
 
     //// その他メソッド ////
 private:
 	//// Update ////
+    ///<summary>
+    ///</summary>
 	virtual void Select();
 
 	///<summary>

@@ -5,8 +5,8 @@
 #include <vector>
 #include <queue>
 
-#include "model/domain/Input.hpp"
-#include "ViewController/Sequence.hpp"
+#include "../model/domain/Input.hpp"
+#include "../ViewController/Sequence.hpp"
 
 namespace sys
 {

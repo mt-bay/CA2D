@@ -5,7 +5,7 @@
 
 #include "../kernel.hpp"
 
-#include "../model/domain/SequenceState.hpp"
+#include "../../model/domain/SequenceState.hpp"
 
 namespace sys
 {

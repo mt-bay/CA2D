@@ -162,7 +162,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\kernel\kernel.cpp" />
+    <ClCompile Include="src\sys\cpp\kernel.cpp" />
     <ClCompile Include="src\lib\asc\Input\AscInput.cpp" />
     <ClCompile Include="src\lib\asc\Input\AscInputAxis.cpp" />
     <ClCompile Include="src\model\domain\cpp\UserConfigLoader.cpp" />
@@ -286,7 +286,7 @@
     <Font Include="Example\YomogiFont.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\kernel.hpp" />
+    <ClInclude Include="src\sys\kernel.hpp" />
     <ClInclude Include="src\lib\asc\Input.hpp" />
     <ClInclude Include="src\lib\asc\Input\Axis.hpp" />
     <ClInclude Include="src\lib\asc\Input\CAxis.hpp" />
