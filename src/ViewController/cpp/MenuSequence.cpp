@@ -20,7 +20,7 @@ void MenuSequence::OnDestroy()
 
 void MenuSequence::Update()
 {
-
+    if(input.)
 }
 
 

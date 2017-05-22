@@ -78,7 +78,7 @@ Optional<uint32> asc::Input::as4Direction(const String& xName, const String& yNa
 		return 2u;
 }
 
-Optional<uint32> asc::Input::as8Direction(const String& xName, const String& yName, double threshold)
+Optional<uint32> asc::Input::as8Direction(const String& xName, const String& yName, double threshold) const
 {
 	const Circular circular = Vec2{ axis(xName), -axis(yName) };
 

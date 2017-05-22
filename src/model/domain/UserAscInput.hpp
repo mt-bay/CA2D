@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "../../lib/asc/Input.hpp"
 
@@ -15,59 +15,112 @@ namespace domain
 
 class UserAscInput : public Input
 {
-    //// �����o�ϐ� ////
+    //// メンバ変数 ////
 protected:
     asc::Input asc;
 
-    //// ���\�b�h ////
+    //// メソッド ////
 public:
     
     ///<summary>
-    /// ���͏�Ԃ̎擾�E�X�V
+    /// 入力状態の取得・更新
     ///</summary>
     [[deprecated]] virtual void Update();
 
     /// <summary>
-    /// �������͂���Ă��邩
+    /// ↓が入力されているか(4方向)
     /// </summary>
-    virtual bool Left() const;
+    virtual bool Direction4Down() const;
 
     /// <summary>
-    /// �������͂���Ă��邩
+    /// →が入力されているか(4方向)
     /// </summary>
-    virtual bool Down() const;
+    virtual bool Direction4Right() const;
 
     /// <summary>
-    /// �������͂���Ă��邩
+    /// ↑が入力されているか(4方向)
     /// </summary>
-    virtual bool Up() const;
+    virtual bool Direction4Up() const;
 
     /// <summary>
-    /// �������͂���Ă��邩
+    /// ←が入力されているか(4方向)
     /// </summary>
-    virtual bool Right() const;
+    virtual bool Direction4Left() const;
 
     /// <summary>
-    /// ���肪���͂���Ă��邩
+    /// ↓が入力されているか
+    /// </summary>
+    virtual bool Direction8Down() const;
+
+    /// <summary>
+    /// ↙が入力されているか
+    /// </summary>
+    virtual bool Direction8DownerRight() const;
+
+    /// <summary>
+    /// →が入力されているか
+    /// </summary>
+    virtual bool Direction8Right() const;
+
+    /// <summary>
+    /// ↗が入力されているか
+    /// </summary>
+    virtual bool Direction8UpperRight() const;
+
+    /// <summary>
+    /// ↑が入力されているか
+    /// </summary>
+    virtual bool Direction8Up() const;
+
+    /// <summary>
+    /// ↖が入力されているか
+    /// </summary>
+    virtual bool Direction8UpperLeft() const;
+
+    /// <summary>
+    /// ↖が入力されているか
+    /// </summary>
+    virtual bool Direction8Left() const;
+
+    /// <summary>
+    /// ↙が入力されているか
+    /// </summary>
+    virtual bool Direction8DownerLeft() const;
+
+    /// <summary>
+    /// 決定が入力されているか
     /// </summary>
     virtual bool Confirm() const;
 
     /// <summary>
-    /// �L�����Z�������͂���Ă��邩
+    /// キャンセルが入力されているか
     /// </summary>
     virtual bool Cancel() const;
 
 protected:
-    enum Direction
+    enum Direction4
     {
-        LEFT  = 2u,
-        DOWN  = 3u,
-        UP    = 1u,
-        RIGHT = 0u
+        Down  = 0u,
+        Right = 1u,
+        Up    = 2u,
+        Left  = 3u
     };
 
-    inline bool DirectionCheck(const Direction direction) const;
 
+    enum Direction8
+    {
+        Down        = 0u,
+        DownerRight = 1u,
+        Right       = 2u,
+        UpperRight  = 3u,
+        Up          = 4u,
+        UpperLeft   = 5u,
+        Left        = 6u,
+        DownerLeft  = 7u
+    };
+
+    inline bool Direction4Check(const Direction4 direction) const;
+    inline bool Direction8Check(const Direction8 direction) const;
     
 };
 

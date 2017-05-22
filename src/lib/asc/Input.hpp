@@ -112,7 +112,7 @@ namespace asc
 		/// <returns>
 		/// [0, 7] で表現された方向。threshold以下の場合は none
 		/// </returns>
-		Optional<uint32> as8Direction(const String& xName, const String& yName, double threshold = 0.2);
+		Optional<uint32> as8Direction(const String& xName, const String& yName, double threshold = 0.2) const;
 
 		/// <summary>
 		/// ボタンが登録済みかを確認します。

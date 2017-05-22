@@ -20,28 +20,75 @@ void UserAscInput::Update()
 }
 
 
-bool UserAscInput::Left() const
+bool UserAscInput::Direction4Left() const
 {
-    return DirectionCheck(Direction::LEFT);
+    return Direction4Check(Direction4::Left);
 }
 
 
-
-bool UserAscInput::Down() const
+bool UserAscInput::Direction4Down() const
 {
-    return DirectionCheck(Direction::DOWN);
+    return Direction4Check(Direction4::Down);
 }
 
 
-bool UserAscInput::Up() const
+bool UserAscInput::Direction4Up() const
 {
-    return DirectionCheck(Direction::UP);
+    return Direction4Check(Direction4::Up);
 }
 
 
-bool UserAscInput::Right() const
+bool UserAscInput::Direction4Right() const
 {
-    return DirectionCheck(Direction::RIGHT);
+    return Direction4Check(Direction4::Right);
+}
+
+
+bool UserAscInput::Direction8Down() const
+{
+    return Direction8Check(Direction8::Down);
+}
+
+
+bool UserAscInput::Direction8DownerRight() const
+{
+    return Direction8Check(Direction8::DownerRight);
+}
+
+
+bool UserAscInput::Direction8Right() const
+{
+    return Direction8Check(Direction8::Right);
+}
+
+
+bool UserAscInput::Direction8UpperRight() const
+{
+    return Direction8Check(Direction8::UpperRight);
+}
+
+
+bool UserAscInput::Direction8Up() const
+{
+    return Direction8Check(Direction8::Up);
+}
+
+
+bool UserAscInput::Direction8UpperLeft() const
+{
+    return Direction8Check(Direction8::UpperLeft);
+}
+
+
+bool UserAscInput::Direction8Left() const
+{
+    return Direction8Check(Direction8::Left);
+}
+
+
+bool UserAscInput::Direction8DownerLeft() const
+{
+    return Direction8Check(Direction8::DownerLeft);
 }
 
 
@@ -57,9 +104,16 @@ bool UserAscInput::Cancel() const
 }
 
 
-bool UserAscInput::DirectionCheck(const Direction direction) const
+bool UserAscInput::Direction4Check(const Direction4 direction) const
 {
     Optional<uint32> d =  asc.as4Direction(L"Lx", L"Ly");
+    return d.has_value() ? false : d.value() == (unsigned int)direction;
+}
+
+
+bool UserAscInput::Direction8Check(const Direction8 direction) const
+{
+    Optional<uint32> d = asc.as8Direction(L"Lx", L"Ly");
     return d.has_value() ? false : d.value() == (unsigned int)direction;
 }
 

@@ -25,8 +25,6 @@ namespace viewController
 {
 
 
-
-
 ///<summary>
 ///全シーケンスの基底クラス
 ///</summary>
