@@ -13,8 +13,35 @@ namespace domain
 {
 
 
+
+
 class UserAscInput : public Input
 {
+    enum Direction4
+    {
+        DOWN = 0u,
+        RIGHT = 1u,
+        UP = 2u,
+        LEFT = 3u
+    };
+
+
+    enum Direction8
+    {
+        Down = 0u,
+        DownerRight = 1u,
+        Right = 2u,
+        UpperRight = 3u,
+        Up = 4u,
+        UpperLeft = 5u,
+        Left = 6u,
+        DownerLeft = 7u
+    };
+
+
+
+
+
     //// メンバ変数 ////
 protected:
     asc::Input asc;
@@ -98,26 +125,8 @@ public:
     virtual bool Cancel() const;
 
 protected:
-    enum Direction4
-    {
-        Down  = 0u,
-        Right = 1u,
-        Up    = 2u,
-        Left  = 3u
-    };
 
 
-    enum Direction8
-    {
-        Down        = 0u,
-        DownerRight = 1u,
-        Right       = 2u,
-        UpperRight  = 3u,
-        Up          = 4u,
-        UpperLeft   = 5u,
-        Left        = 6u,
-        DownerLeft  = 7u
-    };
 
     inline bool Direction4Check(const Direction4 direction) const;
     inline bool Direction8Check(const Direction8 direction) const;

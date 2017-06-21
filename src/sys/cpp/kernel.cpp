@@ -10,10 +10,11 @@
 namespace sys
 {
 
-
-void Kernel::Init()
+Kernel::Kernel()
 {
-
+    sequenceStack = std::vector<viewController::Sequence*>();
+    loadRequests  = std::queue<s3d::INIReader>();
+    currentIndex = 0;
 }
 
 
@@ -37,6 +38,11 @@ void Kernel::MainProcess()
             currentIndex = (int)sequenceStack.size() - 1;
         }
     }
+}
+
+void Kernel::SequenceEnqueue(s3d::String sequenceIniFile)
+{
+    loadRequests.push(s3d::INIReader(sequenceIniFile));
 }
 
 

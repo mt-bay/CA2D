@@ -5,6 +5,7 @@
 #include "Sequence.hpp"
 
 #include "../model/domain/Choice.hpp"
+#include "../model/domain/UserAscInput.hpp"
 
 namespace viewController
 {
@@ -15,11 +16,14 @@ class MenuSequence : public Sequence
     //// メンバ変数 ////
 public:
     std::vector<model::domain::Choice> choices;
+    asc::Input input;
 
 private:
     int selected;
 
 public:
+    MenuSequence(INIReader& reader);
+
     virtual ~MenuSequence();
 
     //// ライフサイクル ////

@@ -6,6 +6,12 @@ namespace viewController
 {
 
 
+MenuSequence::MenuSequence(s3d::INIReader& reader)
+{
+
+}
+
+
 MenuSequence::~MenuSequence()
 {
 
@@ -20,7 +26,6 @@ void MenuSequence::OnDestroy()
 
 void MenuSequence::Update()
 {
-    if(input.)
 }
 
 

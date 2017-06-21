@@ -2,9 +2,17 @@
 
 #include"lib/asc/Input.hpp"
 
+#include "sys/kernel.hpp"
+
+
+sys::Kernel system;
+
 
 void Main()
 {
+    //初期化の類
+    system = sys::Kernel();
+
     asc::Input input;
 
     Font font(16);
@@ -25,6 +33,7 @@ void Main()
     s3d::String str;
     while (System::Update())
     {
+
         //font(L"わいわい忍者ランド").draw(110, 100);
         // 値の使用
 

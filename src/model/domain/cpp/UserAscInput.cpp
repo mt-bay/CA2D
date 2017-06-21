@@ -22,25 +22,25 @@ void UserAscInput::Update()
 
 bool UserAscInput::Direction4Left() const
 {
-    return Direction4Check(Direction4::Left);
+    return Direction4Check(Direction4::LEFT);
 }
 
 
 bool UserAscInput::Direction4Down() const
 {
-    return Direction4Check(Direction4::Down);
+    return Direction4Check(Direction4::DOWN);
 }
 
 
 bool UserAscInput::Direction4Up() const
 {
-    return Direction4Check(Direction4::Up);
+    return Direction4Check(Direction4::UP);
 }
 
 
 bool UserAscInput::Direction4Right() const
 {
-    return Direction4Check(Direction4::Right);
+    return Direction4Check(Direction4::RIGHT);
 }
 
 

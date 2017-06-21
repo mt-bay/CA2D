@@ -8,15 +8,17 @@
 #include "../model/domain/Input.hpp"
 #include "../ViewController/Sequence.hpp"
 
+#include "../lib/asc/Input.hpp"
+
 namespace sys
 {
 
 
 ///Kernel
 ///状態管理用クラス
-class Kernel
+class Kernel final
 {
-	//メンバ変数
+	////メンバ変数////
 public:
 
 private:
@@ -25,13 +27,14 @@ private:
     ///カレントとして処理・描画するindex
     int currentIndex;
     
-    std::queue<s3d::String> loadRequest;
+    std::queue<s3d::INIReader> loadRequests;
 
 public:
-    void Init();
+    Kernel();
 
     void MainProcess();
 
+    void SequenceEnqueue(s3d::String sequenceIniFile);
 private:
     ///
     void Update();
